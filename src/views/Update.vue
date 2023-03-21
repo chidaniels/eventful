@@ -52,6 +52,14 @@
         components: {
             Header,
             Footer
-        }
+        },
+    mounted()
+{
+    let user=localStorage.getItem("user-info")
+    if(!user){
+       this.$router.push({name:"EditDelete"})
+    }
+}
+  
     }
     </script>
